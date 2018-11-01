@@ -1,0 +1,55 @@
+@charset 'utf-8';
+// 设置公共样式
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+// 去除ul的默认样式
+ul {
+    list-style: none;
+}
+
+// 设置默认样式
+a {
+    // 设置 继承颜色
+    color: inherit;
+    font-size: 12px;
+    // 设置透明色  此默认样式只存在移动端
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+}
+
+// 去除input的默认样式
+input {
+    border: none;
+    outline: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+// 清除浮动
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+body {
+    font-size: 16px;
+}
