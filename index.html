@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/font-awesome.css">
     <script src="./js/htmlFont.js"></script>
-    <title>Document</title>
+    <title>首页</title>
 </head>
 
 <body>
@@ -105,7 +105,9 @@
             <a class="fa fa-chevron-right" href="javascript:;"></a>
         </div>
         <div class="goods">
+            <ul class="goodslist">
 
+            </ul>
         </div>
     </div>
 
@@ -142,15 +144,35 @@
 </html>
 <script src="./lib/jquery/jquery-1.12.4.js"></script>
 <script src="./js/index.js"></script>
+
+<script src="./lib/template/template.js"></script>
+<script type="text/template" id="goodsListTmp">
+    {{each result as val key}}
+    <li>
+        <div class="img-left">
+            {{val.productImg2}}
+        </div>
+        <div class="li-right">
+            <a href="javascript:;">{{val.productName}}<span>{{val.productPinkage}}</span></a>
+            <div class="right-bottom">
+                <p>{{val.productFrom}}|{{val.productTime}}</p>
+                <p>{{val.productComCount}}</p>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</script>
 <script>
     $.ajax({
         type: 'post',
-        url: 'http://mmb.ittun.com/api/getmoneyctrl',
+        url: 'http://193.112.55.79:9090/api/getmoneyctrl',
         dataType: 'jsonp',
         success: function(res) {
-            if (res && res.code == 200) {
-                conlose.log(res);
-            }
+            console.log(res);
+            template.config("escape", false);
+            var htmlStr = template('goodsListTmp', res);
+            //动态渲染数据
+            $('.goodslist').html(htmlStr);
         }
     })
 </script>

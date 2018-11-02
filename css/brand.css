@@ -58,133 +58,36 @@ header .header-footer a {
   line-height: 0.5rem;
 }
 
-header .kong {
-  height: 0.14rem;
-  background-color: #f1f1f1;
-}
-
-.nav {
+.allClassify .allClassify-top p {
+  background-color: #f3f3f3;
+  padding: 0.1rem 0 0.1rem 0.1rem;
+  border-top: 1px solid #b1bebe;
+  border-bottom: 1px solid #b1bebe;
   margin-bottom: 0.1rem;
 }
 
-.nav .nav-top ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+.allClassify .allClassify-top p:nth-of-type(2) {
+  color: #a6654b;
 }
 
-.nav .nav-top ul li {
-  width: 25%;
-  padding: 0.2rem 0 0 0.4rem;
-}
-
-.nav .nav-top ul li a {
-  width: 60%;
-}
-
-.nav .nav-top ul li a p {
-  width: 100%;
-  text-align: center;
-  font-size: 0.12rem;
-}
-
-.nav .nav-footer ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.nav .nav-footer ul li {
-  width: 25%;
-  padding: 0.2rem 0 0 0.4rem;
-}
-
-.nav .nav-footer ul li a {
-  width: 60%;
-}
-
-.nav .nav-footer ul li a p {
-  width: 100%;
-  text-align: center;
-  font-size: 0.12rem;
-}
-
-.discount {
-  padding-top: 0.1rem;
-}
-
-.discount .discount-top {
+.allClassify .allClassifyList ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #ffa027;
+  background-color: #ededed;
+  border-bottom: 1px solid #b1bebe;
 }
 
-.discount .discount-top p {
+.allClassify .allClassifyList ul li p:first-child {
+  font-weight: 600;
   padding: 0.1rem 0 0.1rem 0.1rem;
-  color: #fff;
 }
 
-.discount .discount-top a {
-  padding: 0.12rem 0.1rem 0.1rem 0;
-}
-
-.discount .goods ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 2.4rem;
-  border-bottom: 1px solid #b4b4b4;
-}
-
-.discount .goods ul li .img-left {
-  width: 30%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-}
-
-.discount .goods ul li .li-right {
-  width: 70%;
-  padding: 0.2rem 0.2rem 0;
-}
-
-.discount .goods ul li .li-right a span {
-  color: #ff950c;
-}
-
-.discount .goods ul li .li-right .right-bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 1.0rem;
-  color: #b4b4b4;
-}
-
-.morecount {
-  padding: 0 0.1rem;
-}
-
-.morecount a {
-  padding: 0.1rem 0;
-  text-align: center;
-  border: 1px solid #e4e4e4;
-  border-radius: 0.1rem;
-  background-color: #f9f9f9;
+.allClassify .allClassifyList ul li p:last-child {
+  padding: 0.1rem 0.2rem 0.1rem 0;
 }
 
 footer {
@@ -264,4 +167,4 @@ footer .footer-footer a {
   text-align: center;
   color: #737373;
 }
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=brand.css.map */
