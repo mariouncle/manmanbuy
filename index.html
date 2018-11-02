@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
     <script src="./js/htmlFont.js"></script>
     <title>Document</title>
 </head>
@@ -25,13 +26,105 @@
         <div class="kong"></div>
     </header>
 
+    <!-- 导航栏 -->
+    <div class="nav">
+        <div class="nav-top">
+            <ul>
+                <li>
+                    <a href="javascript:;"><img src="./images/ic_search.png" alt="">
+                        <p>比价搜索</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="./images/ic_cu.png" alt="">
+                        <p>省钱控</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="./images/ic_coudanpin.png" alt="">
+                        <p>国内折扣</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="./images/ic_bcj.png" alt="">
+                        <p>白菜价</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="./images/haitao.png" alt="">
+                        <p>海涛折扣</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="./images/ic_temai.png" alt="">
+                        <p>优惠券</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="./images/ic_trend.png" alt="">
+                        <p>查历史价</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-more" href="javascript:;"><img src="./images/gengduo.png" alt="">
+                        <p>更多</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-footer" style="display:none">
+            <ul>
+                <li>
+                    <a href="javascript:;"><img src="./images/ic_coudanpin.png" alt="">
+                        <p>凑单品</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="./images/ic_kb.png" alt="">
+                        <p>口碑排行</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="./images/ic_mall.png" alt="">
+                        <p>商城导航</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="./images/ic_pp.png" alt="">
+                        <p>品牌大全</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 超值折扣推荐 -->
+    <div class="discount">
+        <div class="discount-top">
+            <p>超值折扣推荐</p>
+            <a class="fa fa-chevron-right" href="javascript:;"></a>
+        </div>
+        <div class="goods">
+
+        </div>
+    </div>
+
+    <!-- 更多优惠信息 -->
+    <div class="morecount">
+        <a href="javascript:;">更多优惠信息<span class="fa fa-angle-double-right"></span></a>
+    </div>
+
     <!-- 底部 -->
     <footer>
+        <div class="brand">
+            <p>品牌排行</p>
+            <a class="fa fa-chevron-right" href="javascript:;"></a>
+        </div>
         <div class="footer-top">
             <ul>
                 <li>登录</li>
                 <li>注册</li>
-                <li class="go">返回顶部</li>
+                <li class="go"><span class="fa fa-arrow-up"></span> 返回顶部</li>
             </ul>
         </div>
         <div class="footer-footer">
@@ -48,13 +141,16 @@
 
 </html>
 <script src="./lib/jquery/jquery-1.12.4.js"></script>
+<script src="./js/index.js"></script>
 <script>
-    $(function() {
-        /* 需求模板：当__按钮__被__点击__时，效果是__返回顶部__ */
-        $('.go').click(function() {
-            $('html,body').stop().animate({
-                scrollTop: 0
-            });
-        });
-    });
+    $.ajax({
+        type: 'post',
+        url: 'http://mmb.ittun.com/api/getmoneyctrl',
+        dataType: 'jsonp',
+        success: function(res) {
+            if (res && res.code == 200) {
+                conlose.log(res);
+            }
+        }
+    })
 </script>

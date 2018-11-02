@@ -63,8 +63,118 @@ header .kong {
   background-color: #f1f1f1;
 }
 
+.nav {
+  margin-bottom: 0.1rem;
+}
+
+.nav .nav-top ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.nav .nav-top ul li {
+  width: 25%;
+  padding: 0.2rem 0 0 0.4rem;
+}
+
+.nav .nav-top ul li a {
+  width: 60%;
+}
+
+.nav .nav-top ul li a p {
+  width: 100%;
+  text-align: center;
+  font-size: 0.12rem;
+}
+
+.nav .nav-footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.nav .nav-footer ul li {
+  width: 25%;
+  padding: 0.2rem 0 0 0.4rem;
+}
+
+.nav .nav-footer ul li a {
+  width: 60%;
+}
+
+.nav .nav-footer ul li a p {
+  width: 100%;
+  text-align: center;
+  font-size: 0.12rem;
+}
+
+.discount {
+  padding-top: 0.1rem;
+  background-color: #f1f1f1;
+}
+
+.discount .discount-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #ffa027;
+}
+
+.discount .discount-top p {
+  padding: 0.1rem 0 0.1rem 0.1rem;
+  color: #fff;
+}
+
+.discount .discount-top a {
+  padding: 0.12rem 0.1rem 0.1rem 0;
+}
+
+.discount .goods {
+  height: 8rem;
+}
+
+.morecount {
+  padding: 0 0.1rem;
+}
+
+.morecount a {
+  padding: 0.1rem 0;
+  text-align: center;
+  border: 1px solid #e4e4e4;
+  border-radius: 0.1rem;
+  background-color: #f9f9f9;
+}
+
 footer {
   background-color: #efefef;
+}
+
+footer .brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #ffa027;
+  margin-bottom: 0.4rem;
+}
+
+footer .brand p {
+  padding: 0.1rem 0 0.1rem 0.1rem;
+  color: #fff;
+}
+
+footer .brand a {
+  padding: 0.12rem 0.1rem 0.1rem 0;
 }
 
 footer .footer-top ul {

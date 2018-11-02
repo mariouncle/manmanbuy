@@ -15,7 +15,7 @@ ul {
 a {
     // 设置 继承颜色
     color: inherit;
-    font-size: 12px;
+    display: block;
     // 设置透明色  此默认样式只存在移动端
     -webkit-tap-highlight-color: transparent;
     text-decoration: none;
