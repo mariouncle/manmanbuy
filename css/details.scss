@@ -63,58 +63,16 @@ header {
             font-weight: 600;
         }
     }
-    .tenoftop {
-        ul {
-            a {
-                li {
-                    position: relative;
-                    height: 0.8rem;
-                    border-bottom: 1px solid #b1bebe;
-                    .num {
-                        position: absolute;
-                        width: 0.3rem;
-                        height: 0.3rem;
-                        top: 0.1rem;
-                        left: 0.2rem;
-                        color: #fff;
-                        text-align: center;
-                        line-height: 0.3rem;
-                        background-color: #c9c9c9;
-                    }
-                    .neirong {
-                        position: absolute;
-                        top: 0.1rem;
-                        left: 0.6rem;
-                        p:first-child {
-                            font-size: 0.24rem;
-                        }
-                        p:last-child {
-                            color: #9c9c9c;
-                        }
-                    }
-                    #jiantou {
-                        position: absolute;
-                        top: 0.2rem;
-                        right: 0.1rem;
-                        font-size: 0.3rem;
-                    }
-                }
-            }
-            a:first-child {
-                .num {
-                    background-color: #f10e0e;
-                }
-            }
-            a:nth-child(2) {
-                .num {
-                    background-color: #ff9314;
-                }
-            }
-            a:nth-child(3) {
-                .num {
-                    background-color: #8adf5b;
-                }
-            }
+}
+
+.tenoftop {
+    padding: 0.2rem 0.2rem;
+    .newDetails-top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.1rem;
+        p {
+            color: #d5b567;
         }
     }
 }

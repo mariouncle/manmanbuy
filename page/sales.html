@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/goodsClassity.css">
+    <link rel="stylesheet" href="../css/sales.css">
     <link rel="stylesheet" href="../css/font-awesome.css">
     <script src="../js/htmlFont.js"></script>
-    <title>商品分类</title>
+    <title>销量排行</title>
 </head>
 
 <body>
@@ -34,7 +34,7 @@
                 <span>全部分类</span>
                 <span class="fa fa-angle-right"></span>
             </p>
-            <p>平板电视哪个牌子好</p>
+            <p>平板电视产品销量排行</p>
         </div>
         <div class="tenoftop">
             <ul class="tenoftopul">
@@ -73,18 +73,19 @@
 <script src="../js/index.js"></script>
 <script src="../lib/template/template.js"></script>
 <script src="../js/utils.js"></script>
-<!-- 此模板是十大品牌排行 -->
+<!-- 平板电视产品销量排行 -->
 <script type="text/template" id="tenbrandListTmp">
     {{each result as val key}}
-    <a href="./sales.html?id={{val.brandId}}" target=" _blank ">
+    <a href="./details.html?id={{val.productId}}" target="_blank">
         <li>
-
-            <div class="num">{{key + 1}}</div>
+            <div class="right-img">{{val.productImg}}</div>
             <div class="neirong">
-                <p>{{val.brandName}}</p>
-                <p>{{val.brandInfo}}</p>
+                <p>{{val.productName}}</p>
+                <p>{{val.productPrice}}</p>
+                <p>{{val.productQuote}}</p>
+                <p>{{val.productCom}}</p>
+                <p>☆☆☆☆☆</p>
             </div>
-            <div class="fa fa-chevron-right" id="jiantou"></div>
         </li>
     </a>
     {{/each}}
@@ -92,14 +93,19 @@
 <script>
     //获取id
     var id = utils.convertToObj(location.search).id;
+    // console.log(id);
     $.ajax({
-        type: 'get',
-        url: 'http://193.112.55.79:9090/api/getbrand',
+        type: 'post',
+        url: 'http://193.112.55.79:9090/api/getbrandproductlist',
         dataType: 'jsonp',
+        pagesize: 4,
         data: {
-            brandtitleid: id
+            brandtitleid: id,
+
         },
         success: function(res) {
+            console.log(res);
+            template.config("escape", false);
             var htmlStr = template('tenbrandListTmp', res);
             $('.tenoftopul').html(htmlStr);
         }
